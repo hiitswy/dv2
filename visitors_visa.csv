@@ -1,4 +1,4 @@
-﻿Month,Type of Visa,Visitors_Arrivals,Visitors_Departure,Total Visitors
+﻿Month,Type of Visa,Visitors_Arrivals,Visitors_Departure,Total_Visitors
 January,Special Category Visa (subclass 444),170830,160630,331460
 January,Permanent Family Visas,32460,20690,53150
 January,Permanent Skilled Visas,67640,36520,104160
@@ -69,3 +69,4 @@ July,Temporary Visitor Visas,398100,381570,779670
 July,Temporary Work Visas,20030,25800,45830
 July,Temporary Other Visas,39630,44650,84280
 July,Other Visas,2630,7580,10210
+,,,,5950
