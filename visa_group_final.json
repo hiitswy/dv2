@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 250,
+  "title": "Total Arrivals and Total Departures by Visa Group in 2024",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visitors_visa.csv"
+  },
+  "params": [
+    {
+      "name": "Month_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July"
+        ],
+        "labels": [
+          "Show All",
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July"
+        ],
+        "name": "Month Selection: "
+      }
+    },
+    {
+      "name": "Type of Visa",
+      "select": {"type": "point", "fields": ["Type of Visa"]},
+      "bind": "legend"
+    }
+  ],
+  "transform": [
+    {"filter": "Month_selection == null || datum.Month == Month_selection"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "Visitors_Arrivals",
+      "type": "quantitative",
+      "title": "Visitors Arriving in Australia",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "log", "domain": [1, 10000000]}
+    },
+    "y": {
+      "field": "Visitors_Departure",
+      "type": "quantitative",
+      "title": "Visitors Departing from Australia",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "log", "domain": [1, 1000000]}
+    }
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "size": {"value": 100},
+        "color": {
+          "field": "Type of Visa",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Special Category Visa (subclass 444)",
+              "Permanent Family Visas",
+              "Permanent Skilled Visas",
+              "Permanent Other Visas",
+              "Temporary Student Visas",
+              "Temporary Skilled Visas",
+              "Temporary Visitor Visas",
+              "Temporary Work Visas",
+              "Temporary Other Visas",
+              "Other Visas"
+            ],
+            "range": [
+              "#a50026",
+              "#d73027",
+              "#f46d43",
+              "#fdae61",
+              "#fee08b",
+              "#d9ef8b",
+              "#a6d96a",
+              "#66bd63",
+              "#1a9850",
+              "#006837"
+            ]
+          }
+        },
+        "opacity": {"value": 0.8},
+        "tooltip": [
+          {"field": "Month", "type": "nominal"},
+          {
+            "field": "Visitors_Arrivals",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Visitors Arriving"
+          },
+          {
+            "field": "Visitors_Departure",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Visitors Departing"
+          },
+          {"field": "Type of Visa", "type": "nominal"}
+        ]
+      }
+    }
+  ],
+  "config": {}
+}

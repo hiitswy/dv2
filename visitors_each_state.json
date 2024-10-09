@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "title": "Number of short-term visitors arriving to different states from 2019 to 2024",
+  "projection": {"type": "mercator"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/hiitswy/3179/refs/heads/main/w9homework/ne_10m_admin_1_states_provinces.topojson",
+    "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+  },
+  "params": [
+    {
+      "name": "yearSelection",
+      "value": 2024,
+      "bind": {
+        "input": "select",
+        "options": [2019, 2020, 2021, 2022, 2023, 2024],
+        "labels": ["2019", "2020", "2021", "2022", "2023", "2024"],
+        "name": "Select Year"
+      }
+    }
+  ],
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visitors_each_state.csv",
+          "format": {"type": "csv"}
+        },
+        "key": "State",
+        "fields": ["Year", "Number of Visitors"]
+      }
+    },
+    {"filter": "datum.Year == yearSelection"}
+  ],
+  "mark": {"type": "geoshape", "stroke": "white"},
+  "encoding": {
+    "color": {
+      "field": "Number of Visitors",
+      "type": "quantitative",
+      "scale": {"type": "linear", "scheme": "blues"},
+      "title": "Number of Visitors"
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "State"},
+      {
+        "field": "Number of Visitors",
+        "type": "quantitative",
+        "title": "Visitors",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "config": {}
+}

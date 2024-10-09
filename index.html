@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Load Vega, Vega-Lite, and Vega-Embed libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <title>WanYing_FIT3179_DV2</title>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="title-container">
+            <h1>OVERSEAS ARRIVALS AND DEPARTURES IN AUSTRALIA</h1>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <p>This visualisation illustrates the International Arrivals and Departures in Australia.</p>
+            </div>
+        </div>
+        
+        <div class="pure-g center-content section-header">
+            <div class="pure-u-1-1">
+                <h2 class="section-title">WHERE IN AUSTRALIA?</h2>
+            </div>
+        </div>
+        
+        
+        <div class="pure-g center-content">
+            <div class="pure-u-1-1 chart-container">
+                <div id="state_map"></div>
+            </div>
+        </div>
+        
+        <div class="pure-g center-content section-header">
+            <div class="pure-u-1-1">
+                <h2 class="section-title">ABOUT VISITORS</h2>
+            </div>
+        </div>
+
+        <div class="pure-g visualization-row">
+            <!-- Description on the left -->
+            <div class="description description-left">
+                <h3>Visa Group</h3>
+                <p>Ever wondered...</p>
+            </div>
+
+            <!-- Scatter plot container -->
+            <div class="pure-u-1-2" id="visa"></div>
+        
+        </div>
+        
+        <div class="visualization-row">
+    
+            <!-- Bar chart on the left -->
+            <div class="center-content" id="bar_chart"></div>
+
+            <!-- Description container -->
+            <div class="pure-u-1-2>
+                <div class= "description description-left">
+                    <h3>Wondering which part of the world <br> has the most visitors?</h3>
+                    <p>Is the result expected?</p>
+                </div>
+
+            </div>           
+        </div>
+
+        <div class="pure-g visualization-row">
+            <div class="pure-u-1-1 center-content" id="purpose"></div>
+        </div>
+
+        <!-- End -->
+        <div class="pure-g footer">
+            <div class ="pure-u-1-1 small-font">
+                <p> 
+                    This visualisation is created by <a href="https://github.com/hiitswy/dv2" target="_blank"> Wan Ying Yeow</a>. 
+                    The datasource is <a href="https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/jul-2024#key-statistics" target="_blank"> provided by Australian Bureau of Statistics. </a>
+                </p>
+            
+            </div>
+        </div>
+
+    </div> <!-- end page-->
+
+    <script>
+        // Path to your Vega JSON specification file
+        var vg_top10 = "top10_final.json"; 
+        var vg_map = "visitors_each_state.json"; 
+        var vg_visa = "visa_group_final.json";
+        var vg_purpose = "visitors_purpose_2filters.json";
+
+        // Embed the Vega visualization
+        vegaEmbed("#bar_chart", vg_top10).then(function(result) {
+            // Access the Vega view instance if needed
+            console.log(result.view);
+        }).catch(console.error);
+
+        vegaEmbed("#state_map", vg_map).then(function(result) {
+            console.log("World map rendered");
+        }).catch(console.error);
+
+        vegaEmbed("#visa", vg_visa).then(function(result) {
+            console.log("World map rendered");
+        }).catch(console.error);
+
+        vegaEmbed("#purpose", vg_purpose).then(function(result) {
+            console.log("World map rendered");
+        }).catch(console.error);
+    </script>
+</body>
+</html>

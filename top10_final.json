@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Short-term visitor arrivals, Australia - top 10 source locations",
+  "width": 800,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hiitswy/3179/refs/heads/main/week10_homework/top_10_source_countries_Jul2024.csv"
+  },
+  "height": {"step": 50},
+  "mark": {"type": "bar", "cornerRadiusEnd": 2, "height": {"band": 0.5}},
+  "title": {
+    "text": "Top 10 Locations of Visitor Arrivals in July 2024",
+    "anchor": "middle",
+    "fontSize": 18,
+    "fontWeight": "bold",
+    "dy": -10
+  },
+  "params": [
+    {
+      "name": "Visitor_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 130000,
+        "step": 5000,
+        "name": "Minimum Visitors: "
+      }
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "Main Source of Visitors",
+      "title": "Location",
+      "scale": {"padding": 0},
+      "axis": {
+        "bandPosition": 0,
+        "grid": true,
+        "domain": false,
+        "ticks": false,
+        "labelAlign": "left",
+        "labelBaseline": "middle",
+        "labelPadding": -3,
+        "labelOffset": -18,
+        "titleX": 5,
+        "titleY": -5,
+        "titleAngle": 0,
+        "titleAlign": "left"
+      }
+    },
+    "x": {
+      "field": "Jul_2024",
+      "type": "quantitative",
+      "aggregate": "sum",
+      "axis": {"grid": false, "title": "Number of Visitors in Jul 2024"},
+      "scale": {"domain": [0, 125000]}
+    },
+    "color": {
+      "condition": {
+        "test": "datum.Jul_2024 > Visitor_Above",
+        "value": "#99d8c9"
+      },
+      "value": "lightgrey"
+    },
+    "tooltip": [
+      {
+        "field": "Main Source of Visitors",
+        "type": "ordinal",
+        "title": "Location"
+      },
+      {
+        "field": "Jul_2024",
+        "format": ",.0f",
+        "type": "quantitative",
+        "title": "Visitors in July 2024"
+      }
+    ]
+  },
+  "config": {}
+}

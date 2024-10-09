@@ -1,0 +1,121 @@
+  h1{
+    font-family: "Bebas Neue";
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.1; /* Adjust line height to reduce space within the title */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px; /* Control space directly below the title */
+  }
+  
+  p.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+  }
+  h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #333;
+    padding: 20px 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+
+  html, body{
+    background-color:"white";
+  }
+
+  .pure-g {
+    margin-bottom: 20px;
+}
+
+.pure-u-1-1 {
+  width: 100%;
+}
+
+.pure-u-2 {
+  margin: 2000px;
+  height: 10vw;
+  width: 50%;
+  padding: 0 50px;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.chart-container {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+.visualization-row {
+  display: flex;
+  justify-content: center;
+  align-items: start; /* Aligns the content at the top */
+  gap: 20px; /* Space between the items */
+  margin-bottom: 50px;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.title-container {
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px; /* This controls the padding under the border */
+  margin-bottom: 0; /* Reduce this to close the gap below */
+}
+
+
+.section-header {
+  padding: 0; /* Remove padding to reduce space */
+  margin-top: 0; /* Remove margin to reduce space above the section */
+  text-align: center;
+}
+
+h2.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: red;
+  display: inline-block;
+  border-bottom: 3px solid #ddd;
+  padding-bottom: 5px;
+  margin-top: 0; /* Remove or set to 0 to reduce space above */
+  margin-bottom: 10px; /* Adjust as needed to bring content closer below */
+  text-align: center;
+}
+
+.chart-container {
+    margin-top: 0; /* Remove any top margin here */
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+
+.description-left {
+  flex: 0 0 150px; /* Fixed width for the description on the left */
+  text-align: left;
+}

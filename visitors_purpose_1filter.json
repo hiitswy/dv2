@@ -1,0 +1,64 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": "Short-term Movement, Visitors Arriving - Main Reason for Journey",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visitors_purpose.csv"
+  },
+  "mark": "area",
+  "params": [
+    {
+      "name": "selectYear",
+      "value": [2024],
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2024,
+        "step": 1,
+        "name": "Select Year:"
+      }
+    },
+    {
+      "name": "Purpose",
+      "select": {"type": "point", "fields": ["Purpose"]},
+      "bind": "legend"
+    }
+  ],
+  "transform": [{"filter": "year(datum.yearMonth) >= selectYear"}],
+  "encoding": {
+    "x": {
+      "timeUnit": "yearmonth",
+      "field": "yearMonth",
+      "axis": {
+        "domain": false,
+        "format": "%Y",
+        "tickSize": 0,
+        "title": "Year Month"
+      }
+    },
+    "y": {
+      "field": "Number_of_Visitors",
+      "aggregate": "sum",
+      "stack": "center",
+      "axis": null
+    },
+    "color": {"field": "Purpose", "scale": {"scheme": "paired"}},
+    "opacity": {"condition": {"param": "Purpose", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {
+        "field": "yearMonth",
+        "type": "temporal",
+        "timeUnit": "yearmonth",
+        "title": "Year Month"
+      },
+      {"field": "Purpose", "type": "nominal"},
+      {
+        "field": "Number_of_Visitors",
+        "type": "quantitative",
+        "title": "Number of Visitors"
+      }
+    ]
+  },
+  "config": {}
+}

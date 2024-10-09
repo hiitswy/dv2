@@ -1,0 +1,5 @@
+var vg_map = "w9_hw_final.vg.json"; 
+  
+  vegaEmbed("#state_map", vg_map).then(function(result) {
+            console.log("State map rendered");
+        }).catch(console.error);
