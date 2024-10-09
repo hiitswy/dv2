@@ -1,55 +1,49 @@
 ﻿State,Year,Number of Visitors
-NSW,2019,3480530
-NSW,2020,391870
-NSW,2021,134760
-NSW,2022,1443590
-NSW,2023,2842140
-NSW,2024,1527180
-VIC,2019,2522390
-VIC,2020,287410
-VIC,2021,75160
-VIC,2022,1062230
-VIC,2023,1901710
-VIC,2024,1059560
-QLD,2019,2038950
-QLD,2020,203030
-QLD,2021,51520
-QLD,2022,843800
-QLD,2023,1497060
-QLD,2024,846970
-SA,2019,278080
-SA,2020,34940
-SA,2021,8590
-SA,2022,140500
-SA,2023,226990
-SA,2024,111840
-WA,2019,898480
-WA,2020,115460
-WA,2021,15550
-WA,2022,421210
-WA,2023,694830
-WA,2024,399740
-TAS,2019,96970
-TAS,2020,14520
-TAS,2021,4480
-TAS,2022,47050
-TAS,2023,73120
-TAS,2024,36660
-NT,2019,77460
-NT,2020,6980
-NT,2021,3710
-NT,2022,29840
-NT,2023,46270
-NT,2024,27480
-ACT,2019,108180
-ACT,2020,14760
-ACT,2021,5190
-ACT,2022,57490
-ACT,2023,95980
-ACT,2024,49740
-Other Territories,2019,290
-Other Territories,2020,110
-Other Territories,2021,40
-Other Territories,2022,320
-Other Territories,2023,700
-Other Territories,2024,460
+New South Western Australiales,2019,3480530
+New South Western Australiales,2020,391870
+New South Western Australiales,2021,134760
+New South Western Australiales,2022,1443590
+New South Western Australiales,2023,2842140
+New South Western Australiales,2024,1527180
+Victoria,2019,2522390
+Victoria,2020,287410
+Victoria,2021,75160
+Victoria,2022,1062230
+Victoria,2023,1901710
+Victoria,2024,1059560
+Queensland,2019,2038950
+Queensland,2020,203030
+Queensland,2021,51520
+Queensland,2022,843800
+Queensland,2023,1497060
+Queensland,2024,846970
+South Australia,2019,278080
+South Australia,2020,34940
+South Australia,2021,8590
+South Australia,2022,140500
+South Australia,2023,226990
+South Australia,2024,111840
+Western Australia,2019,898480
+Western Australia,2020,115460
+Western Australia,2021,15550
+Western Australia,2022,421210
+Western Australia,2023,694830
+Western Australia,2024,399740
+Tasmania,2019,96970
+Tasmania,2020,14520
+Tasmania,2021,4480
+Tasmania,2022,47050
+Tasmania,2023,73120
+Tasmania,2024,36660
+Northern Territory,2019,77460
+Northern Territory,2020,6980
+Northern Territory,2021,3710
+Northern Territory,2022,29840
+Northern Territory,2023,46270
+Northern Territory,2024,27480
+Australian Capital Territory,2019,108180
+Australian Capital Territory,2020,14760
+Australian Capital Territory,2021,5190
+Australian Capital Territory,2022,57490
+Australian Capital Territory,2023,95980
+Australian Capital Territory,2024,49740
