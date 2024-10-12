@@ -1,72 +1,57 @@
-﻿Month,Type of Visa,Visitors_Arrivals,Visitors_Departure,Total_Visitors
-January,Special Category Visa (subclass 444),170830,160630,331460
-January,Permanent Family Visas,32460,20690,53150
-January,Permanent Skilled Visas,67640,36520,104160
-January,Permanent Other Visas,90760,47870,138630
-January,Temporary Student Visas,82890,56500,139390
-January,Temporary Skilled Visas,29850,10910,40760
-January,Temporary Visitor Visas,370220,561360,931580
-January,Temporary Work Visas,29780,20970,50750
-January,Temporary Other Visas,72260,50350,122610
-January,Other Visas,1230,6750,7980
-February,Special Category Visa (subclass 444),142620,134900,277520
-February,Permanent Family Visas,23800,18960,42760
-February,Permanent Skilled Visas,45440,32060,77500
-February,Permanent Other Visas,55150,43250,98400
-February,Temporary Student Visas,175950,33580,209530
-February,Temporary Skilled Visas,15400,11590,26990
-February,Temporary Visitor Visas,570160,545670,1115830
-February,Temporary Work Visas,29290,23510,52800
-February,Temporary Other Visas,59570,48280,107850
-February,Other Visas,1130,4820,5950
-March,Special Category Visa (subclass 444),153750,147200,300950
-March,Permanent Family Visas,22060,22850,44910
-March,Permanent Skilled Visas,37940,37440,75380
-March,Permanent Other Visas,47740,60060,107800
-March,Temporary Student Visas,44580,39860,84440
-March,Temporary Skilled Visas,15290,16560,31850
-March,Temporary Visitor Visas,530900,512170,1043070
-March,Temporary Work Visas,28610,25360,53970
-March,Temporary Other Visas,55050,53640,108690
-March,Other Visas,2080,6240,8320
-April,Special Category Visa (subclass 444),159250,155940,315190
-April,Permanent Family Visas,22370,21040,43410
-April,Permanent Skilled Visas,42420,33380,75800
-April,Permanent Other Visas,65500,55830,121330
-April,Temporary Student Visas,45950,36210,82160
-April,Temporary Skilled Visas,19500,14420,33920
-April,Temporary Visitor Visas,372640,440940,813580
-April,Temporary Work Visas,23760,25450,49210
-April,Temporary Other Visas,47630,47650,95280
-April,Other Visas,1910,5990,7900
-May,Special Category Visa (subclass 444),146140,140730,286870
-May,Permanent Family Visas,20020,20210,40230
-May,Permanent Skilled Visas,33550,29110,62660
-May,Permanent Other Visas,53110,51840,104950
-May,Temporary Student Visas,38010,42170,80180
-May,Temporary Skilled Visas,16020,15390,31410
-May,Temporary Visitor Visas,363700,373460,737160
-May,Temporary Work Visas,24450,28490,52940
-May,Temporary Other Visas,42850,45350,88200
-May,Other Visas,2320,6030,8350
-June,Special Category Visa (subclass 444),141260,140150,281410
-June,Permanent Family Visas,21110,20710,41820
-June,Permanent Skilled Visas,32190,35970,68160
-June,Permanent Other Visas,52250,57600,109850
-June,Temporary Student Visas,39230,104960,144190
-June,Temporary Skilled Visas,18170,18290,36460
-June,Temporary Visitor Visas,393690,351440,745130
-June,Temporary Work Visas,23240,24770,48010
-June,Temporary Other Visas,39190,47220,86410
-June,Other Visas,2410,7710,10120
-July,Special Category Visa (subclass 444),162890,159220,322110
-July,Permanent Family Visas,20490,20340,40830
-July,Permanent Skilled Visas,40090,31390,71480
-July,Permanent Other Visas,61690,51910,113600
-July,Temporary Student Visas,132970,43930,176900
-July,Temporary Skilled Visas,20410,17110,37520
-July,Temporary Visitor Visas,398100,381570,779670
-July,Temporary Work Visas,20030,25800,45830
-July,Temporary Other Visas,39630,44650,84280
-July,Other Visas,2630,7580,10210
-,,,,5950
+﻿Month,Type of Visa,Visitors_Arrivals,Visitors_Departure
+January,Subclass 444 Visa,170830,160630
+January,Family Visa,32460,20690
+January,Skilled Visa,97490,47430
+January,Student Visa,82890,56500
+January,Visitor Visa,370220,561360
+January,Work Visa,29780,20970
+January,Other Visa,163020,98220
+January,Unknown Visa,1230,6750
+February,Subclass 444 Visa,142620,134900
+February,Family Visa,23800,18960
+February,Skilled Visa,60840,43650
+February,Student Visa,175950,33580
+February,Visitor Visa,570160,545670
+February,Work Visa,29290,23510
+February,Other Visa,114720,91530
+February,Unknown Visa,1130,4820
+March,Subclass 444 Visa,153750,147200
+March,Family Visa,22060,22850
+March,Skilled Visa,53230,54000
+March,Student Visa,44580,39860
+March,Visitor Visa,530900,512170
+March,Work Visa,28610,25360
+March,Other Visa,102790,113700
+March,Unknown Visa,2080,6240
+April,Subclass 444 Visa,159250,155940
+April,Family Visa,22370,21040
+April,Skilled Visa,61920,47800
+April,Student Visa,45950,36210
+April,Visitor Visa,372640,440940
+April,Work Visa,23760,25450
+April,Other Visa,113130,103480
+April,Unknown Visa,1910,5990
+May,Subclass 444 Visa,146140,140730
+May,Family Visa,20020,20210
+May,Skilled Visa,49570,44500
+May,Student Visa,38010,42170
+May,Visitor Visa,363700,373460
+May,Work Visa,24450,28490
+May,Other Visa,95960,97190
+May,Unknown Visa,2320,6030
+June,Subclass 444 Visa,141260,140150
+June,Family Visa,21110,20710
+June,Skilled Visa,50360,54260
+June,Student Visa,39230,104960
+June,Visitor Visa,393690,351440
+June,Work Visa,23240,24770
+June,Other Visa,91440,104820
+June,Unknown Visa,2410,7710
+July,Subclass 444 Visa,162890,159220
+July,Family Visa,20490,20340
+July,Skilled Visa,60500,48500
+July,Student Visa,132970,43930
+July,Visitor Visa,398100,381570
+July,Work Visa,20030,25800
+July,Other Visa,101320,96560
+July,Unknown Visa,2630,7580
