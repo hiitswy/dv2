@@ -62,18 +62,30 @@ h2 {
     text-align: center;
   }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #020202;
-    background-color:"white";
-  }
 
+  body {
+    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
+    line-height: 1.6; /* Improve readability with line spacing */
+    color: #333; /* Dark text color for better contrast */
+    background-color: #f8f8f8; /* Light background for a soft look */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding for spacing */
+}
 .pure-g {
     margin-bottom: 20px;
 }
 
 .pure-u-1-1 {
   width: 50%;
+}
+
+.dive-deeper {
+  border: 1px solid #3498db; /* Border color */
+  background-color: #f1f9ff; /* Light blue background */
+  padding: 15px; /* Space inside the border */
+  margin-top: 5px; /* Space above the section */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .center-content {
@@ -94,7 +106,7 @@ body {
 
 
 .page-container {
-  width: 1200px; 
+  width: 1250px; 
   height: 3000px; 
   border: 1px solid #000; 
   padding: 20px; 
