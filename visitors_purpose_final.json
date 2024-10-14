@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Short-term Movement, Visitors Arriving - Main Reason for Journey",
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visitors_purpose.csv"
+  },
+  "vconcat": [
+    {
+      "width": 800,
+      "height": 400,
+      "mark": "area",
+      "params": [
+        {
+          "name": "Purpose",
+          "select": {"type": "point", "fields": ["Purpose"]},
+          "bind": "legend"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonth",
+          "field": "yearMonth",
+          "scale": {"domain": {"param": "brush"}},
+          "axis": {"tickSize": 0, "title": "Year Month"}
+        },
+        "y": {
+          "field": "Number_of_Visitors",
+          "aggregate": "sum",
+          "stack": "center",
+          "axis": null
+        },
+        "color": {"field": "Purpose", "scale": {"scheme": "paired"}},
+        "opacity": {
+          "condition": {"param": "Purpose", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {
+            "field": "yearMonth",
+            "type": "temporal",
+            "timeUnit": "yearmonth",
+            "title": "Year Month"
+          },
+          {"field": "Purpose", "type": "nominal"},
+          {
+            "field": "Number_of_Visitors",
+            "type": "quantitative",
+            "title": "Number of Visitors",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "width": 800,
+      "height": 80,
+      "mark": "area",
+      "params": [
+        {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+      ],
+      "encoding": {
+        "x": {
+          "timeUnit": "yearmonth",
+          "field": "yearMonth",
+          "axis": {"format": "%Y", "tickSize": 0, "title": "Year"}
+        },
+        "y": {
+          "field": "Number_of_Visitors",
+          "aggregate": "sum",
+          "stack": "center",
+          "axis": null
+        }
+      }
+    }
+  ],
+  "config": {}
+}

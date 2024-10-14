@@ -4,7 +4,7 @@
   "height": 250,
   "title": "Total Arrivals and Total Departures by Visa Group in 2024",
   "data": {
-    "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visitors_visa.csv"
+    "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visa_group.csv"
   },
   "params": [
     {
@@ -69,16 +69,14 @@
           "type": "nominal",
           "scale": {
             "domain": [
-              "Special Category Visa (subclass 444)",
-              "Permanent Family Visas",
-              "Permanent Skilled Visas",
-              "Permanent Other Visas",
-              "Temporary Student Visas",
-              "Temporary Skilled Visas",
-              "Temporary Visitor Visas",
-              "Temporary Work Visas",
-              "Temporary Other Visas",
-              "Other Visas"
+              "Subclass 444 Visa",
+              "Family Visa",
+              "Skilled Visa",
+              "Student Visa",
+              "Visitor Visa",
+              "Work Visa",
+              "Other Visa",
+              "Unknown Visa"
             ],
             "range": [
               "#a50026",
@@ -88,9 +86,7 @@
               "#fee08b",
               "#d9ef8b",
               "#a6d96a",
-              "#66bd63",
-              "#1a9850",
-              "#006837"
+              "#66bd63"
             ]
           }
         },

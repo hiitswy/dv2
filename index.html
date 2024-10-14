@@ -21,7 +21,7 @@
 
 <body>
 
-    <div class="page">
+    <div class="page page-container">
 
         <div class="title-container">
             <h1>OVERSEAS ARRIVALS AND DEPARTURES IN AUSTRALIA</h1>
@@ -32,55 +32,57 @@
                 <p>This visualisation illustrates the International Arrivals and Departures in Australia.</p>
             </div>
         </div>
-        
+
+        <!-- Where in Australia-->
         <div class="pure-g center-content section-header">
             <div class="pure-u-1-1">
-                <h2 class="section-title">WHERE IN AUSTRALIA?</h2>
+                <h2>WHERE IN AUSTRALIA?</h2>
             </div>
         </div>
-        
-        
+
         <div class="pure-g center-content">
-            <div class="pure-u-1-1 chart-container">
+            <div class="pure-u-1-1">
                 <div id="state_map"></div>
             </div>
         </div>
         
+        <!-- Country of Arrivals-->
         <div class="pure-g center-content section-header">
             <div class="pure-u-1-1">
-                <h2 class="section-title">ABOUT VISITORS</h2>
+                <h2>COUNTRY OF ARRIVALS</h2>
             </div>
         </div>
 
         <div class="pure-g visualization-row">
-            <!-- Description on the left -->
-            <div class="description description-left">
-                <h3>Visa Group</h3>
-                <p>Ever wondered...</p>
+            <div class="center-content">
+                <div id="world_map"></div>
             </div>
 
-            <!-- Scatter plot container -->
-            <div class="pure-u-1-2" id="visa"></div>
-        
-        </div>
-        
-        <div class="visualization-row">
-    
-            <!-- Bar chart on the left -->
-            <div class="center-content" id="bar_chart"></div>
-
-            <!-- Description container -->
-            <div class="pure-u-1-2>
-                <div class= "description description-left">
-                    <h3>Wondering which part of the world <br> has the most visitors?</h3>
-                    <p>Is the result expected?</p>
+            <div class="pure-u-1-2">
+                <div class="center-content">
+                    <div id="bar_chart"></div>
                 </div>
+                
+            </div>
+        </div>
 
-            </div>           
+         <!-- About Visitors -->
+        <div class="pure-g center-content section-header">
+            <div class="pure-u-1-1">
+                <h2>ABOUT VISITORS</h2>
+            </div>
         </div>
 
         <div class="pure-g visualization-row">
-            <div class="pure-u-1-1 center-content" id="purpose"></div>
+            <div class="pure-u-1-1 center-content">
+                <div id="visa"></div>
+            </div>
+        </div>
+
+        <div class="pure-g visualization-row">
+            <div class="pure-u-1-1 center-content">
+                <div id="purpose"></div>
+            </div>
         </div>
 
         <!-- End -->
@@ -101,7 +103,8 @@
         var vg_top10 = "top10_final.json"; 
         var vg_map = "visitors_each_state.json"; 
         var vg_visa = "visa_group_final.json";
-        var vg_purpose = "visitors_purpose_2filters.json";
+        var vg_purpose = "visitors_purpose_final.json";
+        var vg_worldmap = "world_map.json"
 
         // Embed the Vega visualization
         vegaEmbed("#bar_chart", vg_top10).then(function(result) {
@@ -110,15 +113,19 @@
         }).catch(console.error);
 
         vegaEmbed("#state_map", vg_map).then(function(result) {
-            console.log("World map rendered");
+            console.log(result.view);
         }).catch(console.error);
 
         vegaEmbed("#visa", vg_visa).then(function(result) {
-            console.log("World map rendered");
+            console.log(result.view);
         }).catch(console.error);
 
         vegaEmbed("#purpose", vg_purpose).then(function(result) {
-            console.log("World map rendered");
+            console.log(result.view);
+        }).catch(console.error);
+
+        vegaEmbed("#world_map", vg_worldmap).then(function(result) {
+            console.log(result.view);
         }).catch(console.error);
     </script>
 </body>
