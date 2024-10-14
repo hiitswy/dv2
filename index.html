@@ -23,7 +23,7 @@
 
     <div class="page page-container">
 
-        <div class="title-container">
+        <div class="title-section title-container">
             <h1>OVERSEAS ARRIVALS AND DEPARTURES IN AUSTRALIA</h1>
         </div>
 
@@ -40,53 +40,62 @@
             </div>
         </div>
 
-        <div class="pure-g center-content">
-            <div class="pure-u-1-1">
-                <div id="state_map"></div>
+        <div class="pure-g visualization-row">
+            <div class="pure-u-1-1 center-content ">
+                <div>
+                    <div id="state_map"></div>
+                </div>
             </div>
         </div>
         
         <!-- Country of Arrivals-->
-        <div class="pure-g center-content section-header">
-            <div class="pure-u-1-1">
-                <h2>COUNTRY OF ARRIVALS</h2>
-            </div>
-        </div>
-
-        <div class="pure-g visualization-row">
-            <div class="center-content">
-                <div id="world_map"></div>
-            </div>
-
-            <div class="pure-u-1-2">
-                <div class="center-content">
-                    <div id="bar_chart"></div>
+        <section>
+            <header class="section-header">
+                <h2>Country of Arrivals</h2>
+            </header>
+            
+            <div class="visualization-row">
+                <!-- World Map Visualization -->
+                <div class="chart-container">
+                    <figure>
+                        <div id="world_map"></div>
+                    </figure>
                 </div>
-                
             </div>
-        </div>
+
+            <div class="visualization-row">
+                <!-- Bar Chart Visualization -->
+                    <figure>
+                        <div id="bar_chart"></div>
+                    </figure>
+            </div>
+        </section>
 
          <!-- About Visitors -->
-        <div class="pure-g center-content section-header">
-            <div class="pure-u-1-1">
+
+         <section>
+            <header class="section-header">
                 <h2>ABOUT VISITORS</h2>
+            </header>
+            
+            <div class="visualization-row">
+                <div class="chart-container">
+                    <figure>
+                        <div id="purpose"></div>
+                    </figure>
+                </div>
             </div>
-        </div>
 
-        <div class="pure-g visualization-row">
-            <div class="pure-u-1-1 center-content">
-                <div id="visa"></div>
+            <div class="visualization-row">
+                <figure>
+                    <div id="visa"></div>
+                </figure>
             </div>
-        </div>
 
-        <div class="pure-g visualization-row">
-            <div class="pure-u-1-1 center-content">
-                <div id="purpose"></div>
-            </div>
-        </div>
+        </section>
 
         <!-- End -->
-        <div class="pure-g footer">
+        <div class="pure-g footer center-content">
             <div class ="pure-u-1-1 small-font">
                 <p> 
                     This visualisation is created by <a href="https://github.com/hiitswy/dv2" target="_blank"> Wan Ying Yeow</a>. 

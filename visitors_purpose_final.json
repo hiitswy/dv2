@@ -9,8 +9,8 @@
   },
   "vconcat": [
     {
-      "width": 800,
-      "height": 400,
+      "width": 1000,
+      "height": 500,
       "mark": "area",
       "params": [
         {
@@ -55,7 +55,7 @@
       }
     },
     {
-      "width": 800,
+      "width": 1000,
       "height": 80,
       "mark": "area",
       "params": [

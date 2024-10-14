@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Total Arrivals in Australia by Country of Citizenship (updated July 2024)",
-  "width": 800,
+  "width": 1000,
   "height": 500,
   "params": [
     {
       "name": "zoom_level",
-      "value": 150,
+      "value": 175,
       "bind": {
         "input": "range",
         "min": 100,

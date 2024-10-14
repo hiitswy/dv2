@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 800,
+  "width": 1000,
   "height": 500,
   "title": "Number of Short-Term Visitors Arriving to Different States from 2019 to 2024",
   "projection": {"type": "mercator"},
@@ -17,7 +17,7 @@
         "min": 2019,
         "max": 2024,
         "step": 1,
-        "name": "Select Year"
+        "name": "Select Year "
       }
     }
   ],
@@ -38,24 +38,48 @@
     },
     {"filter": "datum.Year == yearSelection"}
   ],
-  "mark": {"type": "geoshape", "stroke": "white"},
-  "encoding": {
-    "shape": {"field": "geo", "type": "geojson"},
-    "color": {
-      "field": "Number of Visitors",
-      "type": "quantitative",
-      "scale": {"scheme": "blues"},
-      "title": "Number of Visitors"
-    },
-    "tooltip": [
-      {"field": "State", "type": "nominal", "title": "State"},
-      {
-        "field": "Number of Visitors",
-        "type": "quantitative",
-        "title": "Visitors",
-        "format": ",.0f"
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Number of Visitors",
+          "type": "quantitative",
+          "scale": {"scheme": "tealblues"},
+          "title": "Number of Visitors"
+        },
+        "tooltip": [
+          {"field": "State", "type": "nominal", "title": "State"},
+          {
+            "field": "Number of Visitors",
+            "type": "quantitative",
+            "title": "Visitors",
+            "format": ",.0f"
+          }
+        ]
       }
-    ]
-  },
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight":"bold",
+        "color": "red",
+        "dy": -10,
+        "dx": 10
+      },
+      "encoding": {
+        "longitude": {"field": "geo.properties.longitude"},
+        "latitude": {"field": "geo.properties.latitude"},
+        "text": {
+          "condition": {
+            "test": "datum.State === 'New South Wales'",
+            "value": {"signal": "'New South Wales: ' + format(datum['Number of Visitors'], ',.0f') + ' Visitors'"}
+          }
+        }
+      }
+    }
+  ],
   "config": {}
 }
