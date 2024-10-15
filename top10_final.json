@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Short-term visitor arrivals, Australia - top 10 source locations",
-  "width": 550,
+  "width": 575,
   "data": {
     "url": "https://raw.githubusercontent.com/hiitswy/3179/refs/heads/main/week10_homework/top_10_source_countries_Jul2024.csv"
   },
