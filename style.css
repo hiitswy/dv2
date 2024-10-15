@@ -11,15 +11,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 200px;  /* Adjust the height as needed */
+  height: 200px;  
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;  /* Text color */
+  color: white; 
 }
 
-/* Semi-transparent overlay for readability */
 .title-section::before {
   content: "";
   position: absolute;
@@ -62,14 +61,22 @@ h2 {
     text-align: center;
   }
 
+h3{
+  font-weight: bold;
+  color: rgb(7, 46, 173);
+}
+
+h4 {
+  color: rgb(15, 204, 179);
+}
 
   body {
-    font-family: Arial, sans-serif; /* Use a clean, sans-serif font */
-    line-height: 1.6; /* Improve readability with line spacing */
-    color: #333; /* Dark text color for better contrast */
-    background-color: #f8f8f8; /* Light background for a soft look */
-    margin: 0; /* Remove default margin */
-    padding: 20px; /* Add padding for spacing */
+    font-family: Arial, sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #f8f8f8; 
+    margin: 0; 
+    padding: 20px; 
 }
 .pure-g {
     margin-bottom: 20px;
@@ -80,12 +87,12 @@ h2 {
 }
 
 .dive-deeper {
-  border: 1px solid #3498db; /* Border color */
-  background-color: #f1f9ff; /* Light blue background */
-  padding: 15px; /* Space inside the border */
-  margin-top: 5px; /* Space above the section */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #3498db; 
+  background-color: #f1f9ff;
+  padding: 15px; 
+  margin-top: 5px;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .center-content {
@@ -98,10 +105,10 @@ h2 {
 .chart-container {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 20px;  /* Keep this for internal padding if needed */
+  padding: 20px;  
   border-radius: 8px;
-  width: 100vw;  /* Make it take the full viewport width */
-  box-sizing: border-box;  /* Ensure padding is included in the width */
+  width: 100vw;  
+  box-sizing: border-box;  
 }
 
 
@@ -125,6 +132,7 @@ h2 {
 body, html {
   margin: 0;
   padding: 0;
+
 }
 
 .footer {

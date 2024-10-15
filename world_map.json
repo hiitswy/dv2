@@ -49,6 +49,7 @@
       "encoding": {
         "color": {
           "field": "Total_Arrival",
+          "title": "Total Arrival",
           "type": "quantitative",
           "scale": {
             "type": "threshold",

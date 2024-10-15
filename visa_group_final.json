@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 420,
-  "height": 250,
+  "height": 300,
   "title": "Total Arrivals and Total Departures by Visa Group in 2024",
   "data": {
     "url": "https://raw.githubusercontent.com/hiitswy/dv2/refs/heads/main/visa_group.csv"
